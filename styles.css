@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:wght@100;400&display=swap'); */
+
 html {
     box-sizing: border-box;
 }
@@ -47,6 +49,7 @@ body {
     position: relative;
     color: rgb(64, 63, 61);
     font-family: Inter;
+    font-style: italic;
     font-size: 16px;
     font-weight: 600;
     margin-right: 40px;
@@ -65,4 +68,63 @@ body {
 
 .menu__cup {
     margin: 0 0 2px 8px;
+}
+
+.hero {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 20px;
+    width: 1360px;
+    height: 644px;
+    border-radius: 40px;
+    background: url(/assets/imgHome/img-hero.jpeg);
+    padding: 100px;
+}
+
+.hero__container {
+    width: 530px;
+    height: 444px;
+}
+
+.hero__enjoy {
+    color: rgb(225, 212, 201);
+    font-family: 'Inter';
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 105%;
+    letter-spacing: 2.5px;
+    text-align: left;
+    margin: 0;
+
+}
+
+.hero_enjoy {
+    color: rgb(176, 144, 122);
+    font-style: italic;
+
+}
+
+.hero__text {
+    color: rgb(225, 212, 201);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.1px;
+    text-align: left;
+    margin: 40px 0;
+}
+
+.hero__btn {
+    color: rgb(64, 63, 61);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    padding: 20px 78px;
+    border-radius: 100px;
+    background: rgb(225, 212, 201);
 }
