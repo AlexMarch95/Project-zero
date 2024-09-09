@@ -87,6 +87,7 @@
 
       &_brown {
         color: $color-brown;
+        font-style: italic;
       }
     }
 
@@ -99,12 +100,60 @@
       display: flex;
 
       gap: 20px;
+
       .ios {
         @include btn;
+        border: none;
+        background-image: url(/assets/buttonHome/button-app-store.png);
+        background-color: rgb(225, 212, 201);
       }
       .google {
+        border: none;
         @include btn;
+        background-image: url(/assets/buttonHome/button-google-play.png);
+        background-color: rgb(225, 212, 201);
       }
+    }
+  }
+}
+.about {
+  margin-top: 100px;
+
+  &__title {
+    @include title;
+    margin-bottom: 40px;
+    &_brown {
+      color: $color-brown;
+      font-style: italic;
+    }
+  }
+
+  &__imgs {
+    width: 1360px;
+    height: 1060px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+    
+    .img-1 {
+      height: 590px;
+    }
+    .img-2 {
+      height: 430px;
+    }
+    .img-3 {
+      height: 430px;
+    }
+    .img-4 {
+
+      height: 590px;
+    }
+    img {
+      max-width: 660px;
+      border-radius: 40px;
+      box-sizing: border-box;
+      
     }
   }
 }

@@ -192,6 +192,7 @@
 }
 .app__offer__title_brown {
   color: rgb(176, 144, 122);
+  font-style: italic;
 }
 .app__offer__text {
   margin: 0;
@@ -215,13 +216,68 @@
   width: 200px;
   height: 64px;
   border-radius: 100px;
+  border: none;
+  background-image: url(/assets/buttonHome/button-app-store.png);
+  background-color: rgb(225, 212, 201);
 }
 .app__offer__btns .google {
+  border: none;
   margin: 0;
   font-family: Inter;
   width: 200px;
   height: 64px;
   border-radius: 100px;
+  background-image: url(/assets/buttonHome/button-google-play.png);
+  background-color: rgb(225, 212, 201);
+}
+
+.about {
+  margin-top: 100px;
+}
+.about__title {
+  margin: 0;
+  font-family: Inter;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+.about__title_brown {
+  color: rgb(176, 144, 122);
+  font-style: italic;
+}
+.about__imgs {
+  width: 1360px;
+  height: 1060px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
+}
+.about__imgs .img-1 {
+  height: 590px;
+}
+.about__imgs .img-2 {
+  height: 430px;
+}
+.about__imgs .img-3 {
+  height: 430px;
+}
+.about__imgs .img-4 {
+  height: 590px;
+}
+.about__imgs img {
+  max-width: 660px;
+  border-radius: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
