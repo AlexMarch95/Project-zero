@@ -1,0 +1,110 @@
+@import "../mixins.scss";
+@import "../vars";
+.hero {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20px;
+  width: 1360px;
+  height: 644px;
+  border-radius: 40px;
+  background: url(/assets/imgHome/img-hero.jpeg);
+  padding: 100px;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  width: 530px;
+  height: 444px;
+  gap: 40px;
+}
+
+.hero__title {
+  color: rgb(225, 212, 201);
+  font-family: "Inter";
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 105%;
+  letter-spacing: 2.5px;
+  text-align: left;
+  margin: 0;
+  &_brown {
+    color: $color-brown;
+    font-style: italic;
+  }
+}
+
+.hero__text {
+  @include text;
+  color: rgb(225, 212, 201);
+}
+
+.hero__btn {
+  @include btn;
+  color: rgb(64, 63, 61);
+  font-size: 16px;
+  text-align: center;
+  background: rgb(225, 212, 201);
+}
+.favorite {
+  margin-top: 100px;
+  width: 1360px;
+  height: 799px;
+  &__title {
+    @include title;
+    text-align: center;
+
+    &_brown {
+      color: $color-brown;
+    }
+  }
+  &__slider {
+    width: 1360px;
+    height: 684px;
+    background-color: black;
+  }
+}
+.app {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1360px;
+  height: 630px;
+
+  &__offer {
+    width: 630px;
+    height: 342px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    &__title {
+      @include title;
+
+      &_brown {
+        color: $color-brown;
+      }
+    }
+
+    &__text {
+      @include text;
+      text-align: left;
+    }
+
+    &__btns {
+      display: flex;
+
+      gap: 20px;
+      .ios {
+        @include btn;
+      }
+      .google {
+        @include btn;
+      }
+    }
+  }
+}
