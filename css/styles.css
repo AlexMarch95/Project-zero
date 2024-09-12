@@ -65,11 +65,12 @@
       -ms-flex-align: center;
           align-items: center;
   margin-top: 20px;
-  width: 1360px;
+  max-width: 1360px;
   height: 644px;
   border-radius: 40px;
   background: url(/assets/imgHome/img-hero.jpeg);
   padding: 100px;
+  background-position: center center;
 }
 
 .hero__container {
@@ -121,6 +122,7 @@
   font-size: 16px;
   text-align: center;
   background: rgb(225, 212, 201);
+  border: none;
 }
 
 .favorite {
@@ -161,7 +163,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 1360px;
+  max-width: 1360px;
   height: 630px;
 }
 .app__offer {
@@ -182,7 +184,7 @@
           align-items: flex-start;
   gap: 40px;
 }
-.app__offer__title {
+.app__offer .app__title {
   margin: 0;
   font-family: Inter;
   font-size: 60px;
@@ -190,11 +192,11 @@
   line-height: 125%;
   letter-spacing: 2px;
 }
-.app__offer__title_brown {
+.app__offer .app__title .app__title_brown {
   color: rgb(176, 144, 122);
   font-style: italic;
 }
-.app__offer__text {
+.app__offer .app__text {
   margin: 0;
   color: rgb(64, 63, 61);
   font-family: Inter;
@@ -204,13 +206,13 @@
   letter-spacing: 0.1px;
   text-align: left;
 }
-.app__offer__btns {
+.app__offer .app__btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
 }
-.app__offer__btns .ios {
+.app__offer .app__btns .app__btns_ios {
   margin: 0;
   font-family: Inter;
   width: 200px;
@@ -220,7 +222,7 @@
   background-image: url(/assets/buttonHome/button-app-store.png);
   background-color: rgb(225, 212, 201);
 }
-.app__offer__btns .google {
+.app__offer .app__btns .app__btns_google {
   border: none;
   margin: 0;
   font-family: Inter;
@@ -248,7 +250,7 @@
   font-style: italic;
 }
 .about__imgs {
-  width: 1360px;
+  max-width: 1360px;
   height: 1060px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -274,10 +276,126 @@
   height: 590px;
 }
 .about__imgs img {
-  max-width: 660px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 20px;
+  -o-object-fit: none;
+     object-fit: none;
+}
+.about__imgs img:hover {
+  -webkit-transform: scale(105%);
+      -ms-transform: scale(105%);
+          transform: scale(105%);
+}
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+  padding: 100px;
+  height: 450px;
   border-radius: 40px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  background-color: rgb(102, 95, 85);
+  gap: 100px;
+}
+.contacts__offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 530px;
+  height: 250px;
+  gap: 40px;
+}
+.contacts__title {
+  margin: 0;
+  font-family: Inter;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: 2px;
+  color: rgb(225, 212, 201);
+}
+.contacts__title_brown {
+  color: rgb(176, 144, 122);
+  font-style: italic;
+}
+.contacts .contacts__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+.contacts .contacts__social button {
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+  border: none;
+  background-color: rgb(102, 95, 85);
+}
+.contacts .contacts__social .contacts__btn_twitter {
+  background-image: url(/assets/buttonHome/twitter-button.png);
+}
+.contacts .contacts__social .contacts__btn_inst {
+  background-image: url(/assets/buttonHome/inst-button.png);
+}
+.contacts .contacts__social .contacts__btn_face {
+  background-image: url(/assets/buttonHome/face-button.png);
+}
+
+.contacts__info {
+  width: 530px;
+  height: 186px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contacts__info .contacts__us {
+  margin-bottom: 40px;
+  color: rgb(225, 212, 201);
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+.contacts__info .contacts__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 116px;
+}
+.contacts__info .contacts__text a {
+  letter-spacing: 0.5px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  text-align: left;
+  color: rgb(225, 212, 201);
+}
+.contacts__info .contacts__text .contacts__text_phone img {
+  height: 20px;
+  width: 20px;
 }
 
 html {
@@ -300,7 +418,7 @@ a {
 
 body {
   font-family: Arial, "Inter", sans-serif;
-  padding: 20px 40px;
+  padding: 20px 40px 20px 40px;
   max-width: 1440px;
   margin: 0;
   background: rgb(225, 212, 201);

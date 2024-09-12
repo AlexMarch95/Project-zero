@@ -1,0 +1,90 @@
+@import "../mixins.scss";
+@import "../vars";
+
+.contacts {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  padding: 100px;
+  height: 450px;
+  border-radius: 40px;
+  background-color: rgb(102, 95, 85);
+  gap: 100px;
+  &__offer {
+    display: flex;
+    flex-direction: column;
+
+    width: 530px;
+    height: 250px;
+    gap: 40px;
+  }
+  &__title {
+    @include title;
+    color: rgb(225, 212, 201);
+
+    &_brown {
+      color: $color-brown;
+      font-style: italic;
+    }
+  }
+  .contacts__social {
+    display: flex;
+    gap: 12px;
+    button {
+      width: 60px;
+      height: 60px;
+      border-radius: 40px;
+      border: none;
+      background-color: rgb(102, 95, 85);
+    }
+    .contacts__btn_twitter {
+      background-image: url(/assets/buttonHome/twitter-button.png);
+    }
+    .contacts__btn_inst {
+      background-image: url(/assets/buttonHome/inst-button.png);
+    }
+    .contacts__btn_face {
+      background-image: url(/assets/buttonHome/face-button.png);
+    }
+  }
+}
+
+.contacts__info {
+  width: 530px;
+  height: 186px;
+  display: flex;
+  flex-direction: column;
+  .contacts__us {
+    margin-bottom: 40px;
+    color: rgb(225, 212, 201);
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 125%;
+    text-align: left;
+    letter-spacing: .5px;
+  }
+  .contacts__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 116px;
+   
+    a {
+      letter-spacing: .5px;
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 150%;
+      
+      text-align: left;
+      color: rgb(225, 212, 201);
+    }
+    .contacts__text_phone {
+      img {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}
