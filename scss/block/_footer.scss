@@ -35,7 +35,12 @@
       height: 60px;
       border-radius: 40px;
       border: none;
-      background-color: rgb(102, 95, 85);
+      background-color: transparent;
+      transition: background-color 0.7s;
+      cursor: pointer;
+      &:hover {
+        background-color: white;
+      }
     }
     .contacts__btn_twitter {
       background-image: url(/assets/buttonHome/twitter-button.png);
@@ -62,23 +67,29 @@
     font-weight: 600;
     line-height: 125%;
     text-align: left;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
   }
   .contacts__text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
     height: 116px;
-   
     a {
-      letter-spacing: .5px;
+      display: inline;
+      letter-spacing: 0.5px;
       font-family: Inter;
       font-size: 16px;
       font-weight: 600;
       line-height: 150%;
-      
       text-align: left;
       color: rgb(225, 212, 201);
+      border-bottom: 2px solid transparent;
+      padding-bottom: 2px;
+      transition: border-color 0.5s;
+      &:hover:not(:last-child) {
+        border-color: white;
+      }
     }
     .contacts__text_phone {
       img {

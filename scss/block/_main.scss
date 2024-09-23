@@ -43,30 +43,127 @@
 
 .hero__btn {
   @include btn;
+  gap: 5px;
   color: rgb(64, 63, 61);
   font-size: 16px;
-  text-align: center;
+  font-weight: bold;
   background: rgb(225, 212, 201);
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 25px;
+  img {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  &:hover img {
+    opacity: 1;
+  }
 }
 .favorite {
   margin-top: 100px;
   width: 1360px;
   height: 799px;
+
   &__title {
     @include title;
     text-align: center;
+    margin-bottom: 40px;
 
     &_brown {
       color: $color-brown;
     }
   }
-  &__slider {
-    width: 1360px;
-    height: 684px;
-    background-color: black;
+
+  &__slider-btn {
+    min-width: 1360px;
+    height: 640px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    button {
+      border: 2px solid rgb(102, 95, 85);
+      height: 60px;
+      width: 60px;
+      border-radius: 100px;
+      background-color: transparent;
+      transition: background-color 0.5s;
+      &:hover {
+        background-color: rgba(64, 63, 61, 0.8);
+      }
+      img {
+        height: 25px;
+        width: 25px;
+        color: black;
+        filter: brightness(1);
+        transition: filter 0.5s;
+      }
+      &:hover img {
+        filter: brightness(10);
+      }
+    }
+  }
+  .slider {
+    max-width: 1152px;
+    height: 640px;
+    display: flex;
+    justify-content: space-between;
+    &__slide {
+      width: 480px;
+      height: 640px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    &__description {
+      display: flex;
+      flex-direction:  column;
+      gap: 15px;
+      p {
+        margin: 0;
+      }
+    }
+    &__coffee {
+      img {
+        width: 480px;
+        height: 480px;
+      }
+    }
+
+    &__name {
+      color: rgb(64, 63, 61);
+      font-family: Inter;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 95%;
+      text-align: center;
+      letter-spacing: .5px;
+    }
+    &__text {
+      color: rgb(64, 63, 61);
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+      text-align: center;
+      letter-spacing: .1px;
+    }
+    &__price {
+      color: rgb(64, 63, 61);
+      font-family: Inter;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 125%;
+      letter-spacing: 0%;
+      text-align: center;
+    }
   }
 }
+
 .app {
   margin-top: 100px;
   display: flex;
@@ -101,18 +198,25 @@
     .app__btns {
       display: flex;
       gap: 20px;
-
-      .app__btns_ios {
-        @include btn;
-        border: none;
-        background-image: url(/assets/buttonHome/button-app-store.png);
+      button {
+        transition: filter 0.7s;
         background-color: rgb(225, 212, 201);
+        @include btn;
+        border: 1px rgb(102, 95, 85);
+        cursor: pointer;
+        transition: background-image 0.7s;
+      }
+      .app__btns_ios {
+        background-image: url(/assets/buttonHome/button-app-store.png);
+        &:hover {
+          background-image: url(/assets/buttonHome/app-hover.png);
+        }
       }
       .app__btns_google {
-        border: none;
-        @include btn;
         background-image: url(/assets/buttonHome/button-google-play.png);
-        background-color: rgb(225, 212, 201);
+        &:hover {
+          background-image: url(/assets/buttonHome/play-hover.png);
+        }
       }
     }
   }
@@ -126,11 +230,11 @@
     &_brown {
       color: $color-brown;
       font-style: italic;
-    } 
+    }
   }
 
   &__imgs {
-    max-width:1360px;
+    max-width: 1360px;
     height: 1060px;
     display: flex;
     flex-direction: column;

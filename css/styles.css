@@ -118,11 +118,31 @@
   width: 200px;
   height: 64px;
   border-radius: 100px;
+  gap: 5px;
   color: rgb(64, 63, 61);
   font-size: 16px;
-  text-align: center;
+  font-weight: bold;
   background: rgb(225, 212, 201);
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding-left: 25px;
+}
+.hero__btn img {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.hero__btn:hover img {
+  opacity: 1;
 }
 
 .favorite {
@@ -138,14 +158,117 @@
   line-height: 125%;
   letter-spacing: 2px;
   text-align: center;
+  margin-bottom: 40px;
 }
 .favorite__title_brown {
   color: rgb(176, 144, 122);
 }
-.favorite__slider {
-  width: 1360px;
-  height: 684px;
-  background-color: black;
+.favorite__slider-btn {
+  min-width: 1360px;
+  height: 640px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+.favorite__slider-btn button {
+  border: 2px solid rgb(102, 95, 85);
+  height: 60px;
+  width: 60px;
+  border-radius: 100px;
+  background-color: transparent;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.favorite__slider-btn button:hover {
+  background-color: rgba(64, 63, 61, 0.8);
+}
+.favorite__slider-btn button img {
+  height: 25px;
+  width: 25px;
+  color: black;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
+}
+.favorite__slider-btn button:hover img {
+  -webkit-filter: brightness(10);
+          filter: brightness(10);
+}
+.favorite .slider {
+  max-width: 1152px;
+  height: 640px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.favorite .slider__slide {
+  width: 480px;
+  height: 640px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.favorite .slider__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+.favorite .slider__description p {
+  margin: 0;
+}
+.favorite .slider__coffee img {
+  width: 480px;
+  height: 480px;
+}
+.favorite .slider__name {
+  color: rgb(64, 63, 61);
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 95%;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.favorite .slider__text {
+  color: rgb(64, 63, 61);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.1px;
+}
+.favorite .slider__price {
+  color: rgb(64, 63, 61);
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: 0%;
+  text-align: center;
 }
 
 .app {
@@ -212,25 +335,33 @@
   display: flex;
   gap: 20px;
 }
-.app__offer .app__btns .app__btns_ios {
+.app__offer .app__btns button {
+  -webkit-transition: -webkit-filter 0.7s;
+  transition: -webkit-filter 0.7s;
+  transition: filter 0.7s;
+  transition: filter 0.7s, -webkit-filter 0.7s;
+  background-color: rgb(225, 212, 201);
   margin: 0;
   font-family: Inter;
   width: 200px;
   height: 64px;
   border-radius: 100px;
-  border: none;
+  border: 1px rgb(102, 95, 85);
+  cursor: pointer;
+  -webkit-transition: background-image 0.7s;
+  transition: background-image 0.7s;
+}
+.app__offer .app__btns .app__btns_ios {
   background-image: url(/assets/buttonHome/button-app-store.png);
-  background-color: rgb(225, 212, 201);
+}
+.app__offer .app__btns .app__btns_ios:hover {
+  background-image: url(/assets/buttonHome/app-hover.png);
 }
 .app__offer .app__btns .app__btns_google {
-  border: none;
-  margin: 0;
-  font-family: Inter;
-  width: 200px;
-  height: 64px;
-  border-radius: 100px;
   background-image: url(/assets/buttonHome/button-google-play.png);
-  background-color: rgb(225, 212, 201);
+}
+.app__offer .app__btns .app__btns_google:hover {
+  background-image: url(/assets/buttonHome/play-hover.png);
 }
 
 .about {
@@ -338,7 +469,13 @@
   height: 60px;
   border-radius: 40px;
   border: none;
-  background-color: rgb(102, 95, 85);
+  background-color: transparent;
+  -webkit-transition: background-color 0.7s;
+  transition: background-color 0.7s;
+  cursor: pointer;
+}
+.contacts .contacts__social button:hover {
+  background-color: white;
 }
 .contacts .contacts__social .contacts__btn_twitter {
   background-image: url(/assets/buttonHome/twitter-button.png);
@@ -382,9 +519,13 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   height: 116px;
 }
 .contacts__info .contacts__text a {
+  display: inline;
   letter-spacing: 0.5px;
   font-family: Inter;
   font-size: 16px;
@@ -392,6 +533,13 @@
   line-height: 150%;
   text-align: left;
   color: rgb(225, 212, 201);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  -webkit-transition: border-color 0.5s;
+  transition: border-color 0.5s;
+}
+.contacts__info .contacts__text a:hover:not(:last-child) {
+  border-color: white;
 }
 .contacts__info .contacts__text .contacts__text_phone img {
   height: 20px;
@@ -402,6 +550,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
+  display: inherit;
 }
 
 *,
@@ -420,7 +569,7 @@ body {
   font-family: Arial, "Inter", sans-serif;
   padding: 20px 40px 20px 40px;
   max-width: 1440px;
-  margin: 0;
+  margin: 0 auto;
   background: rgb(225, 212, 201);
-  height: 7000px;
+  display: inherit;
 }/*# sourceMappingURL=styles.css.map */
